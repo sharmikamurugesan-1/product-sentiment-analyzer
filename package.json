@@ -1,0 +1,14 @@
+{
+  "name": "product-sentiment-analyzer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sentilytics AI - Product Sentiment Intelligence & Review Analytics",
+  "scripts": {
+    "build": "npm run build --prefix frontend",
+    "start": "npm start --prefix frontend",
+    "preview": "npm run preview --prefix frontend"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

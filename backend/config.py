@@ -7,7 +7,7 @@ DATA_DIR.mkdir(exist_ok=True)
 
 class Config:
     HOST = os.environ.get("FLASK_HOST", "0.0.0.0")
-    PORT = int(os.environ.get("FLASK_PORT", 5000))
+    PORT = int(os.environ.get("PORT", os.environ.get("FLASK_PORT", 5000)))
     DEBUG = os.environ.get("FLASK_DEBUG", "True").lower() in ("true", "1")
     SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-sentiment-analyzer-2026")
     

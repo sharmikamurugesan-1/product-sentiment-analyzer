@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// In development, Vite proxies /api to http://127.0.0.1:5000
-const API_BASE = '/api';
+// Supports VITE_API_URL environment variable for remote API backends, defaulting to '/api' for local proxy & full-stack
+const API_BASE = (import.meta.env.VITE_API_URL || '/api').replace(/\/+$/, '');
 
 const client = axios.create({
   baseURL: API_BASE,
